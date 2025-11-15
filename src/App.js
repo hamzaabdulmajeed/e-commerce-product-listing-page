@@ -8,13 +8,15 @@ function App() {
   return (
     <CartProvider>
       <BrowserRouter>
-        <div className="min-h-screen bg-gray-50">
+        <div className="flex flex-col min-h-screen bg-gray-50">
           <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/cart" element={<CartPage />} />
-          </Routes>
-          <footer className="bg-gray-800 text-white mt-16 py-8">
+          <main className="flex-grow">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/cart" element={<CartPage />} />
+            </Routes>
+          </main>
+         <footer className="bg-gray-800 text-white py-8 mt-auto">
             <div className="container mx-auto px-4 text-center">
               <p>&copy; 2024 ShopHub. All rights reserved.</p>
               <p className="text-sm text-gray-400 mt-2">
